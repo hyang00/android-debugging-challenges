@@ -3,6 +3,7 @@ package com.codepath.debuggingchallenges.activities;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.codepath.debuggingchallenges.R;
@@ -16,11 +17,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void launchActivity(Class klass) {
+        Log.i("myapp", "launch  activity");
         Intent intent = new Intent(this, klass);
         startActivity(intent);
     }
 
     public void launchCurrentDayActivity(View view) {
+        Log.i("myapp", "launch curr day activity");
         launchActivity(CurrentDayActivity.class);
     }
 
